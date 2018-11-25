@@ -1,0 +1,19 @@
+{
+    "response": {
+        "status": "success",
+        "code": "200",
+        "message": "OK"
+    },
+    "result": {
+        "project": {
+            "id": 7717,
+            "name": "Automobile",
+            "description": "Automobile",
+            "public": 0,
+            "open": 0,
+            "reference_language": "fr",
+            "terms": 783,
+            "created": "2013-07-04T17:44:37+0000"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "response": {
+        "status": "success",
+        "code": "200",
+        "message": "OK"
+    },
+    "result": {
+        "languages": [
+            {
+                "name": "English",
+                "code": "en",
+                "translations": 13,
+                "percentage": 12.5,
+                "updated": "2015-05-04T14:21:41+0000"
+            },
+            {
+                "name": "French",
+                "code": "fr",
+                "translations": 70,
+                "percentage": 68.75,
+                "updated": "2015-04-30T08:59:34+0000"
+            }
+        ]
+    }
+}
