@@ -11,13 +11,17 @@ import Cocoa
 class Parser: NSObject {
     lazy var decoder: JSONDecoder = {
         let decoder = JSONDecoder()
+        if #available(OSX 10.12, *) {
         decoder.dateDecodingStrategy = .iso8601
+        }
         return decoder
     }()
     
     lazy var endoder: JSONEncoder = {
         let encoder = JSONEncoder()
-        encoder.dateEncodingStrategy = .iso8601
+        if #available(OSX 10.12, *) {
+            encoder.dateEncodingStrategy = .iso8601
+        }
         return encoder
     }()
 }
