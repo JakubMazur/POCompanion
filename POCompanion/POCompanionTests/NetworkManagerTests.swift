@@ -11,11 +11,15 @@ import XCTest
 
 class NetworkManagerTests: XCTestCase {
 
-    let poeditor: POCompanion = POCompanion(token: <# Your token #>)
+    lazy var pocompanion: POCompanion = {
+        let companion: POCompanion = POCompanion(token: "🦊")
+        companion.networkManager = MockNetworkManager()
+        return companion
+    }()
     
     func testProjects() {
         let expectation = self.expectation(description: #function)
-        poeditor.projects { (projects, error) in
+        pocompanion.projects { (projects, error) in
             XCTAssertTrue(projects?.count ?? 0 > 0)
             expectation.fulfill()
         }
@@ -26,8 +30,8 @@ class NetworkManagerTests: XCTestCase {
     
     func testLanguages() {
         let expectation = self.expectation(description: #function)
-        poeditor.projects { (projects, error) in
-            self.poeditor.languages(project: projects!.first!) { (error) in
+        pocompanion.projects { (projects, error) in
+            self.pocompanion.languages(project: projects!.first!) { (error) in
                 expectation.fulfill()
             }
         }
@@ -39,8 +43,8 @@ class NetworkManagerTests: XCTestCase {
     
     func testProjectView() {
         let expectation = self.expectation(description: #function)
-        poeditor.projects { (projects, error) in
-            self.poeditor.project(identifier: projects!.first!.identifier, completion: { (error) in
+        pocompanion.projects { (projects, error) in
+            self.pocompanion.project(identifier: projects!.first!.identifier, completion: { (error) in
                 XCTAssertNil(error)
                 expectation.fulfill()
             })

@@ -9,12 +9,11 @@
 import Foundation
 
 extension NetworkManager {
-    internal static func projects(token: String, completion:@escaping([Project]?,Error?) -> Void) {
-        let manager: NetworkManager = NetworkManager()
-        manager.detailURL = "/projects/list"
-        manager.parameters = [ParameterKey.token.rawValue: token]
-        manager.method = Method.POST
-        _ = manager.connect(request: manager.request) { (data, response, error) in
+    internal func projects(token: String, completion:@escaping([Project]?,Error?) -> Void) {
+        self.detailURL = NetworkManager.RequestURL.projects
+        self.parameters = [ParameterKey.token.rawValue: token]
+        self.method = Method.POST
+        _ = self.connect(request: self.request) { (data, response, error) in
             do {
                 let parsed = try Parser.from(data: data)
                 completion(parsed?.result?.projects, nil)
@@ -26,13 +25,12 @@ extension NetworkManager {
 }
 
 extension NetworkManager {
-    internal static func languages(token: String, project: Project, completion:@escaping(Error?) -> Void) {
-        let manager: NetworkManager = NetworkManager()
-        manager.detailURL = "/languages/list"
-        manager.parameters = [ParameterKey.token.rawValue: token,
+    internal func languages(token: String, project: Project, completion:@escaping(Error?) -> Void) {
+        self.detailURL = NetworkManager.RequestURL.languages
+        self.parameters = [ParameterKey.token.rawValue: token,
                               ParameterKey.projectID.rawValue: String(project.identifier)]
-        manager.method = Method.POST
-        _ = manager.connect(request: manager.request, completion: { (data, response, error) in
+        self.method = Method.POST
+        _ = self.connect(request: self.request, completion: { (data, response, error) in
             do {
                 let parsed = try Parser.from(data: data)
                 project.languages = parsed?.result?.languages
@@ -45,13 +43,12 @@ extension NetworkManager {
 }
 
 extension NetworkManager {
-    internal static func project(projectID: Int, token: String, completion:@escaping(Project?,Error?) -> Void) {
-        let manager: NetworkManager = NetworkManager()
-        manager.detailURL = "/projects/view"
-        manager.parameters = [ ParameterKey.token.rawValue: token,
+    internal func project(projectID: Int, token: String, completion:@escaping(Project?,Error?) -> Void) {
+        self.detailURL = NetworkManager.RequestURL.project
+        self.parameters = [ ParameterKey.token.rawValue: token,
                                ParameterKey.projectID.rawValue: String(projectID)]
-        manager.method = Method.POST
-        _ = manager.connect(request: manager.request, completion: { (data, response, error) in
+        self.method = Method.POST
+        _ = self.connect(request: self.request, completion: { (data, response, error) in
             do {
                 let parsed = try Parser.from(data: data)
                 completion(parsed?.result?.project, nil)

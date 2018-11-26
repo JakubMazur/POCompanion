@@ -8,11 +8,17 @@
 
 import Cocoa
 
-internal final class NetworkManager: NSObject {
+internal class NetworkManager: NSObject {
     
     enum Method: String {
         case POST
         case GET
+    }
+    
+    enum RequestURL: String, CaseIterable {
+        case project = "/projects/view"
+        case projects = "/projects/list"
+        case languages = "/languages/list"
     }
     
     enum ParameterKey: String {
@@ -22,9 +28,9 @@ internal final class NetworkManager: NSObject {
     
     internal static let baseURL: String = "https://api.poeditor.com/v2"
     
-    internal var detailURL: String? {
+    internal var detailURL: RequestURL? {
         didSet {
-            guard let detail = detailURL else { return }
+            guard let detail = detailURL?.rawValue else { return }
             self.url = URL(string: (NetworkManager.baseURL + detail))
         }
     }

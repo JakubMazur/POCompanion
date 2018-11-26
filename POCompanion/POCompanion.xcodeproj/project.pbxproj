@@ -21,6 +21,7 @@
 		DD0E83ED21AAE2F7000A083A /* language-list.json in Resources */ = {isa = PBXBuildFile; fileRef = DD0E83EC21AAE2F7000A083A /* language-list.json */; };
 		DD0E83EF21AAFAAE000A083A /* projects-view.json in Resources */ = {isa = PBXBuildFile; fileRef = DD0E83EE21AAFAAE000A083A /* projects-view.json */; };
 		DD0E83F121AB0164000A083A /* NetworkManager+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E83F021AB0164000A083A /* NetworkManager+Requests.swift */; };
+		DD0E83F321AB58C0000A083A /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E83F221AB58C0000A083A /* MockNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		DD0E83EC21AAE2F7000A083A /* language-list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "language-list.json"; sourceTree = "<group>"; };
 		DD0E83EE21AAFAAE000A083A /* projects-view.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "projects-view.json"; sourceTree = "<group>"; };
 		DD0E83F021AB0164000A083A /* NetworkManager+Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Requests.swift"; sourceTree = "<group>"; };
+		DD0E83F221AB58C0000A083A /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,12 +113,21 @@
 			isa = PBXGroup;
 			children = (
 				DD0E83DC21A9CE7A000A083A /* NetworkManagerTests.swift */,
+				DD0E83F421AB58C8000A083A /* Mock */,
 				DD0E83EC21AAE2F7000A083A /* language-list.json */,
 				DD0E83E821AAE268000A083A /* projects-list.json */,
 				DD0E83EE21AAFAAE000A083A /* projects-view.json */,
 				DD0E83CC21A9C171000A083A /* Info.plist */,
 			);
 			path = POCompanionTests;
+			sourceTree = "<group>";
+		};
+		DD0E83F421AB58C8000A083A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				DD0E83F221AB58C0000A083A /* MockNetworkManager.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0E83F321AB58C0000A083A /* MockNetworkManager.swift in Sources */,
 				DD0E83DD21A9CE7A000A083A /* NetworkManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,7 @@ import Cocoa
 public class POCompanion: NSObject {
     
     private(set) public var token: String = ""
+    internal var networkManager: NetworkManager = NetworkManager()
     
     public init(token: String) {
         super.init()
@@ -18,19 +19,19 @@ public class POCompanion: NSObject {
     }
     
     func projects(completion:@escaping([Project]?,Error?) -> Void) {
-        NetworkManager.projects(token: self.token) { (projects, error) in
+        networkManager.projects(token: self.token) { (projects, error) in
             completion(projects,error)
         }
     }
     
     func languages(project: Project, completion:@escaping(Error?) -> Void) {
-        NetworkManager.languages(token: self.token, project: project) { (error) in
+        networkManager.languages(token: self.token, project: project) { (error) in
             completion(error)
         }
     }
     
     func project(identifier: Int, completion:@escaping(Error?) -> Void) {
-        NetworkManager.project(projectID: identifier, token: self.token) { (project, error) in
+        networkManager.project(projectID: identifier, token: self.token) { (project, error) in
             completion(error)
         }
     }
