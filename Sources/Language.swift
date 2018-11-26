@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Language: NSObject, Codable {
-    var name: String
-    var code: String
+public class Language: NSObject, Codable {
+    private(set) public var name: String
+    private(set) public var code: String
 }

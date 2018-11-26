@@ -33,7 +33,7 @@ extension NetworkManager {
         _ = self.connect(request: self.request, completion: { (data, response, error) in
             do {
                 let parsed = try Parser.from(data: data)
-                project.languages = parsed?.result?.languages
+                project.append(languages: parsed?.result?.languages)
                 completion(nil)
             } catch {
                 completion(POError.parsingError(error))

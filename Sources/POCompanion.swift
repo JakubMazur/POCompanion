@@ -18,19 +18,19 @@ public class POCompanion: NSObject {
         self.token = token
     }
     
-    func projects(completion:@escaping([Project]?,Error?) -> Void) {
+    public func projects(completion:@escaping([Project]?,Error?) -> Void) {
         networkManager.projects(token: self.token) { (projects, error) in
             completion(projects,error)
         }
     }
     
-    func languages(project: Project, completion:@escaping(Error?) -> Void) {
+    public func languages(project: Project, completion:@escaping(Error?) -> Void) {
         networkManager.languages(token: self.token, project: project) { (error) in
             completion(error)
         }
     }
     
-    func project(identifier: Int, completion:@escaping(Error?) -> Void) {
+    public func project(identifier: Int, completion:@escaping(Error?) -> Void) {
         networkManager.project(projectID: identifier, token: self.token) { (project, error) in
             completion(error)
         }

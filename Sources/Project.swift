@@ -8,13 +8,13 @@
 
 import Cocoa
 
-class Project: NSObject, Codable {
-    var identifier: Int
-    var name: String
-    var isPublic: Int
-    var isOpen: Int
-    var created: Date
-    var languages: [Language]?
+public class Project: NSObject, Codable {
+    private(set) public var identifier: Int
+    private(set) public var name: String
+    private(set) public var isPublic: Int
+    private(set) public var isOpen: Int
+    private(set) public var created: Date
+    private(set) public var languages: [Language]?
     
     enum CodingKeys: String, CodingKey {
         case identifier = "id"
@@ -23,5 +23,9 @@ class Project: NSObject, Codable {
         case isOpen = "open"
         case created
         case languages
+    }
+    
+    func append(languages: [Language]?) {
+        self.languages = languages
     }
 }
