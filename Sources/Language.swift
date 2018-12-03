@@ -13,4 +13,9 @@ public class Language: NSObject, Codable {
     private(set) public var code: String
     var languageURL: URL?
     private(set) public var fileData: Data?
+    
+    func appendData(_ data: Data?) {
+        self.fileData = data
+    }
+    
 }

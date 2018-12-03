@@ -60,7 +60,7 @@ extension NetworkManager {
         _ = self.downloadResources(from: langURL) { (url, response, error) in
             if let fileURL = url {
                 do {
-                    language.fileData = try Data(contentsOf: fileURL)
+                    language.appendData(try Data(contentsOf: fileURL))
                 }
                 catch {
                     completion(POError.parsingError(error))
