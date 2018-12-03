@@ -12,5 +12,5 @@ public class Language: NSObject, Codable {
     private(set) public var name: String
     private(set) public var code: String
     var languageURL: URL?
-    var fileData: Data?
+    private(set) public var fileData: Data?
 }
