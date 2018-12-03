@@ -10,20 +10,25 @@ import Cocoa
 
 internal class NetworkManager: NSObject {
     
+    static let shared = NetworkManager()
+    var token: String = ""
+    
     enum Method: String {
         case POST
         case GET
     }
     
     enum RequestURL: String, CaseIterable {
-        case project = "/projects/view"
-        case projects = "/projects/list"
         case languages = "/languages/list"
+        case export = "/projects/export"
+        case resource = "/download/file/"
     }
     
     enum ParameterKey: String {
         case token = "api_token"
         case projectID = "id"
+        case language = "language"
+        case outputFormat = "type"
     }
     
     internal static let baseURL: String = "https://api.poeditor.com/v2"
@@ -69,7 +74,7 @@ internal class NetworkManager: NSObject {
         }
     }
     
-    func connect(request: URLRequest?, completion:@escaping(Data?,URLResponse?,Error?) -> Void) -> URLSessionDataTask? {
+    func connect(completion:@escaping(Data?,URLResponse?,Error?) -> Void) -> URLSessionDataTask? {
         guard let request = request else {
             completion(nil,nil,POError.invalidURL)
             return nil
@@ -79,5 +84,13 @@ internal class NetworkManager: NSObject {
         }
         dataTask.resume()
         return dataTask
+    }
+    
+    func downloadResources(from url: URL, completion:@escaping(URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTask? {
+        let task = self.session.downloadTask(with: url) { (url, response, error) in
+            completion(url,response,error)
+        }
+        task.resume()
+        return task
     }
 }

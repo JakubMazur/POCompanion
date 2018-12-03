@@ -10,17 +10,12 @@
 		DD0E83C621A9C171000A083A /* POCompanion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0E83BC21A9C171000A083A /* POCompanion.framework */; };
 		DD0E83D721A9C1FA000A083A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E83D621A9C1FA000A083A /* NetworkManager.swift */; };
 		DD0E83DB21A9CB99000A083A /* POCompanion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E83DA21A9CB99000A083A /* POCompanion.swift */; };
-		DD0E83DD21A9CE7A000A083A /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E83DC21A9CE7A000A083A /* NetworkManagerTests.swift */; };
-		DD0E83DF21AAA6D5000A083A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E83DE21AAA6D5000A083A /* Project.swift */; };
-		DD0E83E121AAA8F1000A083A /* ResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E83E021AAA8F1000A083A /* ResponseResult.swift */; };
-		DD0E83E321AAA9F9000A083A /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E83E221AAA9F9000A083A /* Parser.swift */; };
-		DD0E83E521AAC2C3000A083A /* POError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E83E421AAC2C3000A083A /* POError.swift */; };
-		DD0E83E721AADC55000A083A /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E83E621AADC55000A083A /* Language.swift */; };
-		DD0E83E921AAE268000A083A /* projects-list.json in Resources */ = {isa = PBXBuildFile; fileRef = DD0E83E821AAE268000A083A /* projects-list.json */; };
-		DD0E83ED21AAE2F7000A083A /* language-list.json in Resources */ = {isa = PBXBuildFile; fileRef = DD0E83EC21AAE2F7000A083A /* language-list.json */; };
-		DD0E83EF21AAFAAE000A083A /* projects-view.json in Resources */ = {isa = PBXBuildFile; fileRef = DD0E83EE21AAFAAE000A083A /* projects-view.json */; };
-		DD0E83F121AB0164000A083A /* NetworkManager+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E83F021AB0164000A083A /* NetworkManager+Requests.swift */; };
-		DD0E83F321AB58C0000A083A /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E83F221AB58C0000A083A /* MockNetworkManager.swift */; };
+		DDA9621C21B0310F0032D588 /* NetworkManager+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9621B21B0310F0032D588 /* NetworkManager+Requests.swift */; };
+		DDA9621E21B031270032D588 /* POError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9621D21B031270032D588 /* POError.swift */; };
+		DDA9622221B031910032D588 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9622121B031910032D588 /* Language.swift */; };
+		DDA9622421B032150032D588 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9622321B032150032D588 /* Parser.swift */; };
+		DDA9622621B032800032D588 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9622521B032800032D588 /* NetworkManagerTests.swift */; };
+		DDA9622821B032CC0032D588 /* ResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9622721B032CC0032D588 /* ResponseResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,17 +35,12 @@
 		DD0E83CC21A9C171000A083A /* POCompanionTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = POCompanionTests.plist; sourceTree = "<group>"; };
 		DD0E83D621A9C1FA000A083A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DD0E83DA21A9CB99000A083A /* POCompanion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POCompanion.swift; sourceTree = "<group>"; };
-		DD0E83DC21A9CE7A000A083A /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
-		DD0E83DE21AAA6D5000A083A /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
-		DD0E83E021AAA8F1000A083A /* ResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseResult.swift; sourceTree = "<group>"; };
-		DD0E83E221AAA9F9000A083A /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		DD0E83E421AAC2C3000A083A /* POError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POError.swift; sourceTree = "<group>"; };
-		DD0E83E621AADC55000A083A /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
-		DD0E83E821AAE268000A083A /* projects-list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "projects-list.json"; sourceTree = "<group>"; };
-		DD0E83EC21AAE2F7000A083A /* language-list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "language-list.json"; sourceTree = "<group>"; };
-		DD0E83EE21AAFAAE000A083A /* projects-view.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "projects-view.json"; sourceTree = "<group>"; };
-		DD0E83F021AB0164000A083A /* NetworkManager+Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Requests.swift"; sourceTree = "<group>"; };
-		DD0E83F221AB58C0000A083A /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		DDA9621B21B0310F0032D588 /* NetworkManager+Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Requests.swift"; sourceTree = "<group>"; };
+		DDA9621D21B031270032D588 /* POError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POError.swift; sourceTree = "<group>"; };
+		DDA9622121B031910032D588 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		DDA9622321B032150032D588 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		DDA9622521B032800032D588 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		DDA9622721B032CC0032D588 /* ResponseResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,29 +94,21 @@
 			children = (
 				DD0E83CC21A9C171000A083A /* POCompanionTests.plist */,
 				DD0E842421AC2E30000A083A /* Tests */,
+				DDA9622521B032800032D588 /* NetworkManagerTests.swift */,
 			);
 			path = POCompanionTests;
-			sourceTree = "<group>";
-		};
-		DD0E83F421AB58C8000A083A /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				DD0E83F221AB58C0000A083A /* MockNetworkManager.swift */,
-			);
-			path = Mock;
 			sourceTree = "<group>";
 		};
 		DD0E842021AC2D71000A083A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DD0E83E421AAC2C3000A083A /* POError.swift */,
+				DDA9622721B032CC0032D588 /* ResponseResult.swift */,
+				DDA9622321B032150032D588 /* Parser.swift */,
+				DDA9621D21B031270032D588 /* POError.swift */,
 				DD0E83D621A9C1FA000A083A /* NetworkManager.swift */,
+				DDA9621B21B0310F0032D588 /* NetworkManager+Requests.swift */,
+				DDA9622121B031910032D588 /* Language.swift */,
 				DD0E83DA21A9CB99000A083A /* POCompanion.swift */,
-				DD0E83DE21AAA6D5000A083A /* Project.swift */,
-				DD0E83E621AADC55000A083A /* Language.swift */,
-				DD0E83E021AAA8F1000A083A /* ResponseResult.swift */,
-				DD0E83E221AAA9F9000A083A /* Parser.swift */,
-				DD0E83F021AB0164000A083A /* NetworkManager+Requests.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -134,22 +116,9 @@
 		DD0E842421AC2E30000A083A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DD0E842C21AC2E52000A083A /* data */,
-				DD0E83F421AB58C8000A083A /* Mock */,
-				DD0E83DC21A9CE7A000A083A /* NetworkManagerTests.swift */,
 			);
 			path = Tests;
 			sourceTree = SOURCE_ROOT;
-		};
-		DD0E842C21AC2E52000A083A /* data */ = {
-			isa = PBXGroup;
-			children = (
-				DD0E83EC21AAE2F7000A083A /* language-list.json */,
-				DD0E83E821AAE268000A083A /* projects-list.json */,
-				DD0E83EE21AAFAAE000A083A /* projects-view.json */,
-			);
-			path = data;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -216,6 +185,7 @@
 					};
 					DD0E83C421A9C171000A083A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -249,9 +219,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD0E83EF21AAFAAE000A083A /* projects-view.json in Resources */,
-				DD0E83E921AAE268000A083A /* projects-list.json in Resources */,
-				DD0E83ED21AAE2F7000A083A /* language-list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,13 +230,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD0E83DB21A9CB99000A083A /* POCompanion.swift in Sources */,
-				DD0E83E121AAA8F1000A083A /* ResponseResult.swift in Sources */,
-				DD0E83E321AAA9F9000A083A /* Parser.swift in Sources */,
-				DD0E83E721AADC55000A083A /* Language.swift in Sources */,
-				DD0E83F121AB0164000A083A /* NetworkManager+Requests.swift in Sources */,
+				DDA9622221B031910032D588 /* Language.swift in Sources */,
+				DDA9622421B032150032D588 /* Parser.swift in Sources */,
+				DDA9621E21B031270032D588 /* POError.swift in Sources */,
+				DDA9621C21B0310F0032D588 /* NetworkManager+Requests.swift in Sources */,
+				DDA9622821B032CC0032D588 /* ResponseResult.swift in Sources */,
 				DD0E83D721A9C1FA000A083A /* NetworkManager.swift in Sources */,
-				DD0E83DF21AAA6D5000A083A /* Project.swift in Sources */,
-				DD0E83E521AAC2C3000A083A /* POError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD0E83F321AB58C0000A083A /* MockNetworkManager.swift in Sources */,
-				DD0E83DD21A9CE7A000A083A /* NetworkManagerTests.swift in Sources */,
+				DDA9622621B032800032D588 /* NetworkManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,10 +440,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9232HDTN9M;
-				INFOPLIST_FILE = POCompanionTests/Info.plist;
+				INFOPLIST_FILE = POCompanionTests/POCompanionTests.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -486,6 +452,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.jkmazur.POCompanionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -494,10 +461,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9232HDTN9M;
-				INFOPLIST_FILE = POCompanionTests/Info.plist;
+				INFOPLIST_FILE = POCompanionTests/POCompanionTests.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

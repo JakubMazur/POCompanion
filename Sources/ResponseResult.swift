@@ -13,7 +13,6 @@ class Response: NSObject, Codable {
 }
 
 class ResponseResult: NSObject, Codable {
-    var projects: [Project]?
     var languages: [Language]?
-    var project: Project?
+    var url: String?
 }

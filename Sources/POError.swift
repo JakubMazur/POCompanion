@@ -12,4 +12,7 @@ enum POError: Error {
     case invalidURL
     case noData
     case parsingError(_ error: Error)
+    case projectHasNoLanguagesAvailable
+    case invalidLocalizables
+    case gettingFileError
 }
