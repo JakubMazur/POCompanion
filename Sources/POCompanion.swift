@@ -55,7 +55,6 @@ public class POCompanion: NSObject {
                         completion(nil)
                     }
                 }
-                completion(error)
             }
         }
     }
