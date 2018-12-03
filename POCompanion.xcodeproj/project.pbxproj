@@ -93,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				DD0E83CC21A9C171000A083A /* POCompanionTests.plist */,
-				DD0E842421AC2E30000A083A /* Tests */,
 				DDA9622521B032800032D588 /* NetworkManagerTests.swift */,
 			);
 			path = POCompanionTests;
@@ -112,13 +111,6 @@
 			);
 			path = Sources;
 			sourceTree = "<group>";
-		};
-		DD0E842421AC2E30000A083A /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
